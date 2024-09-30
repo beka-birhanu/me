@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
 
-const firamono = Fira_Code({
+const firacode = Fira_Code({
   subsets: ["latin"],
-  variable: "--font-fira-mono",
+  variable: "--font-firacode",
   weight: ["400", "700"],
 });
 
@@ -21,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${firamono.variable} antialiased`}>{children}</body>
+      <body
+        className={`${firacode.variable} antialiased flex flex-col items-center`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
